@@ -18,9 +18,13 @@ public class SquareRootTest {
     @Test
     public void negativeArgumentShouldThrowException() {
         double a = -4;
+        double b = 4;
         SquareRoot root = new SquareRoot();
         Assertions.assertThrows(ArithmeticException.class, () -> {
             root.calcSquareRoot(a);
+        });
+        Assertions.assertThrows(ArithmeticException.class, () -> {
+            root.calcSquareRoot(b);
         });
     }
 }// class
